@@ -36,7 +36,7 @@ public class Controlador {
     }
 
     public void iniciar() {
-//************ BOTONES DE LOS EMPLEADOS ****************
+    //BOTONES DE LOS EMPLEADOS
         // BOTON NUEVO EMPLEADO
         p.btnNewEmple.addActionListener((ActionEvent) -> {
 
@@ -107,7 +107,7 @@ public class Controlador {
                 p.TablaEmpleados.setModel(this.getTablaEmple());
             }
         });
-//**********************************************
+
         //BOTON AGREGAR PROYECTO A EMPLEADO
         p.btnAgregaProye.addActionListener((ActionEvent e) -> {
             jdip = new JDInsertProy(p, true);
@@ -154,8 +154,8 @@ public class Controlador {
             }
         });
 
-//********** BOTONES DE LOS PROYECTOS ************
-        //ACTION EVENT DEL JCOMBOBOX para actualizar la pantalla
+    //BOTONES DE LOS PROYECTOS
+        //ACTION EVENT DEL JCOMBOBOX
         p.jComboBox1.addActionListener((ActionEvent e) -> {
             this.setTxtsProyecto(proyectos.get(p.jComboBox1.getSelectedIndex()));
             p.TablaEmpleProyec.setModel(this.getTablaEmpleProy());
@@ -246,12 +246,12 @@ public class Controlador {
             }
         });
 
-        //********** GENERAR PDF **************
+        //GENERAR PDF
         p.btnGeneraPdf.addActionListener((ActionEvent e) -> {
             this.generaPdf();
         });
 
-        //****************INICIALIZADORES DE LOS MODELOS***************
+        //INICIALIZADORES DE LOS MODELOS
         //Inicializadores de las Tablas y el ComboBox de los proyectos
         p.jComboBox1.setModel(this.getComboBox());
         this.setTxtsProyecto(proyectos.get(p.jComboBox1.getSelectedIndex()));
@@ -259,8 +259,8 @@ public class Controlador {
         p.TablaEmpleados.setModel(this.getTablaEmple());
         p.setVisible(true);
     }
-    //*********************
 
+    //Tabla Empleados
     public DefaultTableModel getTablaEmple() {
         DefaultTableModel modeloEmple = new DefaultTableModel();
         modeloEmple.addColumn("NIF");
@@ -279,8 +279,8 @@ public class Controlador {
         }
         return modeloEmple;
     }
-//**********************
 
+    //Tabla empleados de proyecto
     public DefaultTableModel getTablaEmpleProy() {
         DefaultTableModel modeloEmpleProy = new DefaultTableModel();
         modeloEmpleProy.addColumn("NIF");
@@ -299,8 +299,8 @@ public class Controlador {
         }
         return modeloEmpleProy;
     }
-//**********************
 
+    //Combo proyectos
     public DefaultComboBoxModel getComboBox() {
         DefaultComboBoxModel ComboModel = new DefaultComboBoxModel();
         proyectos = consultas.leerProyectos();
@@ -309,7 +309,6 @@ public class Controlador {
         }
         return ComboModel;
     }
-//***********************
 
     public void setTxtsProyecto(Proyecto proyec) {
         p.txtFchEntrega.setText(proyec.getFechaFin());
@@ -328,6 +327,7 @@ public class Controlador {
         ArrayList<Empleado> relacional;
 
         try {
+            //nombre que tomara el fichero
             ficheroPdf = new FileOutputStream("informe.PDF");
             PdfWriter.getInstance(documento, ficheroPdf).setInitialLeading(20);
         } catch (Exception ex) {
@@ -336,7 +336,7 @@ public class Controlador {
         try {
             //abrimos el documento para editarlo
             documento.open();
-            //aqui agregamos todo el contenido del PDF...
+            //aqui agregamos todo el contenido del PDF
 
             documento.add(new Paragraph("Este informe es una manera de imprimir la informacion, en forma de tablas, de la base de datos"));
             documento.add(new Paragraph(" "));
@@ -426,3 +426,18 @@ public class Controlador {
 
     }
 }
+
+//CODIGO PARA TRABAJAR CON EL PDF
+
+//  documento.add(new Paragraph(""));
+//  nombreDeLaTabla = new PdfPTable(numero de columnas);  este define cada cuantas celdas hace un cambio de fila
+//  tabla_proyec.addCell("lo que quieres que ponga en la celda (se usa para poner los nombres de los campos)");
+//  for (Proyecto p : proyectos  (arraylist de los objetos con los que vas a rellenar los campos) ) {
+//      tabla_proyec.addCell(p.getTitulo());
+//      tabla_proyec.addCell(p.getFechaInicio());
+//      tabla_proyec.addCell(p.getFechaFin());
+//      tabla_proyec.addCell(p.getDescripcion());
+//      tabla_proyec.addCell(String.valueOf(p.getMaxEmple()));
+//  }
+//  documento.add(tabla_proyec);
+//  documento.add(new Paragraph(" "));
