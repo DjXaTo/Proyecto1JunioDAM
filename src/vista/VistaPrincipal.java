@@ -27,49 +27,15 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dialogEmpleProy = new javax.swing.JDialog();
-        jLabel7 = new javax.swing.JLabel();
-        JComboInsert = new javax.swing.JComboBox();
-        jLabel8 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        txtDescripcionInsert = new javax.swing.JTextArea();
-        jLabel9 = new javax.swing.JLabel();
-        btnConfirmarInsert = new javax.swing.JButton();
-        btnCancelarInsert = new javax.swing.JButton();
-        dialogNuevoEmple = new javax.swing.JDialog();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        txtNIF = new javax.swing.JTextField();
-        txtNombre = new javax.swing.JTextField();
-        txtApellidos = new javax.swing.JTextField();
-        btnAceptar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
-        txtFchNaci = new javax.swing.JFormattedTextField();
-        dialogNuevoProy = new javax.swing.JDialog();
-        jLabel14 = new javax.swing.JLabel();
-        txtNameProyect = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        txtDescripcion1 = new javax.swing.JTextArea();
-        btnAceptar1 = new javax.swing.JButton();
-        btnCancelar1 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        txtMaxEmple = new javax.swing.JTextField();
-        txtFchInicio1 = new javax.swing.JFormattedTextField();
-        txtFchEntrega1 = new javax.swing.JFormattedTextField();
         panelPrincipal = new javax.swing.JTabbedPane();
         panelEmple = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablaEmpleados = new javax.swing.JTable();
-        btnNewEmple = new javax.swing.JButton();
+        btnNuevoEmple = new javax.swing.JButton();
         btnDespedir = new javax.swing.JButton();
-        btnAgregaProye = new javax.swing.JButton();
-        btnModEmple = new javax.swing.JButton();
-        btnGeneraPdf = new javax.swing.JButton();
+        btnAgregaProy = new javax.swing.JButton();
+        btnModificarEmple = new javax.swing.JButton();
+        btnGenerarPdf = new javax.swing.JButton();
         panelProy = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
@@ -85,237 +51,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtNMaximo = new javax.swing.JTextField();
-        btnNewProyecto = new javax.swing.JButton();
-        btnModProyecto = new javax.swing.JButton();
-        btnDeleteProyecto = new javax.swing.JButton();
+        btnNuevoProy = new javax.swing.JButton();
+        btnModificarProy = new javax.swing.JButton();
+        btnBorrarProy = new javax.swing.JButton();
         btnEliminaRelacion = new javax.swing.JButton();
-
-        dialogEmpleProy.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLabel7.setText("Proyectos :");
-
-        JComboInsert.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel8.setText("Descripcion :");
-
-        txtDescripcionInsert.setColumns(20);
-        txtDescripcionInsert.setLineWrap(true);
-        txtDescripcionInsert.setRows(5);
-        txtDescripcionInsert.setWrapStyleWord(true);
-        jScrollPane4.setViewportView(txtDescripcionInsert);
-
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Selecciona un proyecto al que agregar el empleado");
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        btnConfirmarInsert.setText("Confirmar");
-
-        btnCancelarInsert.setText("Cancelar");
-
-        javax.swing.GroupLayout dialogEmpleProyLayout = new javax.swing.GroupLayout(dialogEmpleProy.getContentPane());
-        dialogEmpleProy.getContentPane().setLayout(dialogEmpleProyLayout);
-        dialogEmpleProyLayout.setHorizontalGroup(
-            dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogEmpleProyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(dialogEmpleProyLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(JComboInsert, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(dialogEmpleProyLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addGroup(dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dialogEmpleProyLayout.createSequentialGroup()
-                                .addComponent(btnConfirmarInsert)
-                                .addGap(51, 51, 51)
-                                .addComponent(btnCancelarInsert)
-                                .addGap(0, 96, Short.MAX_VALUE))
-                            .addComponent(jScrollPane4))))
-                .addContainerGap())
-        );
-        dialogEmpleProyLayout.setVerticalGroup(
-            dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogEmpleProyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addGap(19, 19, 19)
-                .addGroup(dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(JComboInsert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(dialogEmpleProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnConfirmarInsert)
-                    .addComponent(btnCancelarInsert))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        dialogNuevoEmple.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLabel10.setText("NIF :");
-
-        jLabel11.setText("Nombre :");
-
-        jLabel12.setText("Apellidos :");
-
-        jLabel13.setText("Fecha Nacimiento :");
-
-        btnAceptar.setText("Aceptar");
-
-        btnCancelar.setText("Cancelar");
-
-        txtFchNaci.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-
-        javax.swing.GroupLayout dialogNuevoEmpleLayout = new javax.swing.GroupLayout(dialogNuevoEmple.getContentPane());
-        dialogNuevoEmple.getContentPane().setLayout(dialogNuevoEmpleLayout);
-        dialogNuevoEmpleLayout.setHorizontalGroup(
-            dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogNuevoEmpleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(dialogNuevoEmpleLayout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtNIF, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtFchNaci))
-                    .addGroup(dialogNuevoEmpleLayout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(dialogNuevoEmpleLayout.createSequentialGroup()
-                                .addComponent(btnAceptar)
-                                .addGap(74, 74, 74)
-                                .addComponent(btnCancelar)
-                                .addGap(0, 67, Short.MAX_VALUE))
-                            .addGroup(dialogNuevoEmpleLayout.createSequentialGroup()
-                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel12)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtApellidos)))))
-                .addContainerGap(49, Short.MAX_VALUE))
-        );
-        dialogNuevoEmpleLayout.setVerticalGroup(
-            dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogNuevoEmpleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel10)
-                        .addComponent(txtNIF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel13)
-                        .addComponent(txtFchNaci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12)
-                    .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(dialogNuevoEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAceptar)
-                    .addComponent(btnCancelar))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        dialogNuevoProy.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLabel14.setText("Titulo del Proyecto :");
-
-        jLabel15.setText("Fecha Inicio :");
-
-        jLabel16.setText("Fecha Entrega :");
-
-        jLabel17.setText("Descripcion del Proyecto :");
-
-        txtDescripcion1.setColumns(20);
-        txtDescripcion1.setLineWrap(true);
-        txtDescripcion1.setRows(5);
-        txtDescripcion1.setWrapStyleWord(true);
-        jScrollPane5.setViewportView(txtDescripcion1);
-
-        btnAceptar1.setText("Aceptar");
-
-        btnCancelar1.setText("Cancelar");
-
-        jLabel18.setText("Max. Empleados :");
-
-        txtFchInicio1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-
-        txtFchEntrega1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-
-        javax.swing.GroupLayout dialogNuevoProyLayout = new javax.swing.GroupLayout(dialogNuevoProy.getContentPane());
-        dialogNuevoProy.getContentPane().setLayout(dialogNuevoProyLayout);
-        dialogNuevoProyLayout.setHorizontalGroup(
-            dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogNuevoProyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5)
-                    .addGroup(dialogNuevoProyLayout.createSequentialGroup()
-                        .addGroup(dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel17)
-                            .addGroup(dialogNuevoProyLayout.createSequentialGroup()
-                                .addComponent(jLabel14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtNameProyect, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel18)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtMaxEmple, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(dialogNuevoProyLayout.createSequentialGroup()
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtFchInicio1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFchEntrega1)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(dialogNuevoProyLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(btnAceptar1)
-                .addGap(18, 18, 18)
-                .addComponent(btnCancelar1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        dialogNuevoProyLayout.setVerticalGroup(
-            dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dialogNuevoProyLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(txtNameProyect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18)
-                    .addComponent(txtMaxEmple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16)
-                    .addComponent(txtFchInicio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFchEntrega1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(dialogNuevoProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAceptar1)
-                    .addComponent(btnCancelar1))
-                .addContainerGap())
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -332,15 +71,15 @@ public class VistaPrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TablaEmpleados);
 
-        btnNewEmple.setText("Contratar Empleado");
+        btnNuevoEmple.setText("Contratar Empleado");
 
         btnDespedir.setText("Despedir Empleado");
 
-        btnAgregaProye.setText("Agregar a Proyecto");
+        btnAgregaProy.setText("Agregar a Proyecto");
 
-        btnModEmple.setText("Modificar Empleado");
+        btnModificarEmple.setText("Modificar Empleado");
 
-        btnGeneraPdf.setText("Generar Informe");
+        btnGenerarPdf.setText("Generar Informe");
 
         javax.swing.GroupLayout panelEmpleLayout = new javax.swing.GroupLayout(panelEmple);
         panelEmple.setLayout(panelEmpleLayout);
@@ -351,16 +90,16 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addGroup(panelEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
                     .addGroup(panelEmpleLayout.createSequentialGroup()
-                        .addComponent(btnGeneraPdf)
+                        .addComponent(btnGenerarPdf)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(panelEmpleLayout.createSequentialGroup()
-                        .addComponent(btnNewEmple)
+                        .addComponent(btnNuevoEmple)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnModEmple)
+                        .addComponent(btnModificarEmple)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnDespedir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregaProye)))
+                        .addComponent(btnAgregaProy)))
                 .addContainerGap())
         );
         panelEmpleLayout.setVerticalGroup(
@@ -370,12 +109,12 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNewEmple)
+                    .addComponent(btnNuevoEmple)
                     .addComponent(btnDespedir)
-                    .addComponent(btnModEmple)
-                    .addComponent(btnAgregaProye))
+                    .addComponent(btnModificarEmple)
+                    .addComponent(btnAgregaProy))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
-                .addComponent(btnGeneraPdf)
+                .addComponent(btnGenerarPdf)
                 .addContainerGap())
         );
 
@@ -414,11 +153,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
         jLabel6.setText("Maximo Empleados por Proyecto:");
 
-        btnNewProyecto.setText("Nuevo Proyecto");
+        btnNuevoProy.setText("Nuevo Proyecto");
 
-        btnModProyecto.setText("Modificar Proyecto");
+        btnModificarProy.setText("Modificar Proyecto");
 
-        btnDeleteProyecto.setText("Eliminar Proyecto");
+        btnBorrarProy.setText("Eliminar Proyecto");
 
         btnEliminaRelacion.setText("Eliminar del Proyecto");
 
@@ -449,11 +188,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
                             .addComponent(jScrollPane2)))
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelProyLayout.createSequentialGroup()
-                        .addComponent(btnNewProyecto)
+                        .addComponent(btnNuevoProy)
                         .addGap(18, 18, 18)
-                        .addComponent(btnModProyecto)
+                        .addComponent(btnModificarProy)
                         .addGap(18, 18, 18)
-                        .addComponent(btnDeleteProyecto)
+                        .addComponent(btnBorrarProy)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnEliminaRelacion)))
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -489,9 +228,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelProyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNewProyecto)
-                    .addComponent(btnModProyecto)
-                    .addComponent(btnDeleteProyecto)
+                    .addComponent(btnNuevoProy)
+                    .addComponent(btnModificarProy)
+                    .addComponent(btnBorrarProy)
                     .addComponent(btnEliminaRelacion))
                 .addContainerGap())
         );
@@ -548,67 +287,33 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JComboBox JComboInsert;
     public javax.swing.JTable TablaEmpleProyec;
     public javax.swing.JTable TablaEmpleados;
-    public javax.swing.JButton btnAceptar;
-    public javax.swing.JButton btnAceptar1;
-    public javax.swing.JButton btnAgregaProye;
-    public javax.swing.JButton btnCancelar;
-    public javax.swing.JButton btnCancelar1;
-    public javax.swing.JButton btnCancelarInsert;
-    public javax.swing.JButton btnConfirmarInsert;
-    public javax.swing.JButton btnDeleteProyecto;
+    public javax.swing.JButton btnAgregaProy;
+    public javax.swing.JButton btnBorrarProy;
     public javax.swing.JButton btnDespedir;
     public javax.swing.JButton btnEliminaRelacion;
-    public javax.swing.JButton btnGeneraPdf;
-    public javax.swing.JButton btnModEmple;
-    public javax.swing.JButton btnModProyecto;
-    public javax.swing.JButton btnNewEmple;
-    public javax.swing.JButton btnNewProyecto;
-    public javax.swing.JDialog dialogEmpleProy;
-    public javax.swing.JDialog dialogNuevoEmple;
-    public javax.swing.JDialog dialogNuevoProy;
+    public javax.swing.JButton btnGenerarPdf;
+    public javax.swing.JButton btnModificarEmple;
+    public javax.swing.JButton btnModificarProy;
+    public javax.swing.JButton btnNuevoEmple;
+    public javax.swing.JButton btnNuevoProy;
     public javax.swing.JComboBox jComboBox1;
     public javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabel10;
-    public javax.swing.JLabel jLabel11;
-    public javax.swing.JLabel jLabel12;
-    public javax.swing.JLabel jLabel13;
-    public javax.swing.JLabel jLabel14;
-    public javax.swing.JLabel jLabel15;
-    public javax.swing.JLabel jLabel16;
-    public javax.swing.JLabel jLabel17;
-    public javax.swing.JLabel jLabel18;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
     public javax.swing.JLabel jLabel4;
     public javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    public javax.swing.JLabel jLabel7;
-    public javax.swing.JLabel jLabel8;
-    public javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JScrollPane jScrollPane4;
-    public javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JPanel panelEmple;
     private javax.swing.JTabbedPane panelPrincipal;
     private javax.swing.JPanel panelProy;
-    public javax.swing.JTextField txtApellidos;
     public javax.swing.JTextArea txtDescripcion;
-    public javax.swing.JTextArea txtDescripcion1;
-    public javax.swing.JTextArea txtDescripcionInsert;
     public javax.swing.JTextField txtFchEntrega;
-    public javax.swing.JFormattedTextField txtFchEntrega1;
     public javax.swing.JTextField txtFchInicio;
-    public javax.swing.JFormattedTextField txtFchInicio1;
-    public javax.swing.JFormattedTextField txtFchNaci;
-    public javax.swing.JTextField txtMaxEmple;
-    public javax.swing.JTextField txtNIF;
     public javax.swing.JTextField txtNMaximo;
-    public javax.swing.JTextField txtNameProyect;
-    public javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

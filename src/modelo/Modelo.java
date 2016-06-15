@@ -21,9 +21,9 @@ public class Modelo {
         this.conn = new Conexion();
     }
 
-    //************* EMPLEADOS *************
-    public ArrayList<Empleado> recogerEmpleados() {
-        ArrayList<Empleado> lEmple = new ArrayList<>();
+    //EMPLEADOS
+    public ArrayList<Empleado> leerEmpleados() {
+        ArrayList<Empleado> listaEmple = new ArrayList<>();
         try {
             stm = conn.conectado().createStatement();
             rst = stm.executeQuery("SELECT * FROM empleado");
@@ -34,12 +34,12 @@ public class Modelo {
                 e.setNombre(rst.getString("Nombre"));
                 e.setApellido(rst.getString("Apellido"));
                 e.setFechaNacimiento(rst.getString("Fecha_Nacimiento"));
-                lEmple.add(e);
+                listaEmple.add(e);
             }
         } catch (SQLException ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return lEmple;
+        return listaEmple;
     }
 
     public void agregarEmpleado(String nif, String nombre, String apellido, String fecha) {
@@ -89,9 +89,9 @@ public class Modelo {
 
     }
 
-    //************ PROYECTOS ************
+    //PROYECTOS
     public ArrayList<Proyecto> leerProyectos() {
-        ArrayList<Proyecto> lProyect = new ArrayList<>();
+        ArrayList<Proyecto> listaProy = new ArrayList<>();
         try {
             stm = conn.conectado().createStatement();
             rst = stm.executeQuery("SELECT * FROM proyecto");
@@ -103,13 +103,13 @@ public class Modelo {
                 p.setFechaInicio(rst.getString("Fecha_Inicio"));
                 p.setFechaFin(rst.getString("Fecha_Fin"));
                 p.setMaxEmple(rst.getInt("max_emple"));
-                lProyect.add(p);
+                listaProy.add(p);
             }
 
         } catch (SQLException ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return lProyect;
+        return listaProy;
     }
 
     public void agregarProyecto(String titulo, String fch_inicio, String fch_entrega, String descripcion, int max_emple) {
@@ -156,9 +156,9 @@ public class Modelo {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-//***** MEZCLA *****
-    public ArrayList<Empleado> recogerEmpleProy(int id) {
-        ArrayList<Empleado> lEmple2 = new ArrayList<>();
+//MEZCLA
+    public ArrayList<Empleado> leerEmpleProy(int id) {
+        ArrayList<Empleado> listaEmpleProy = new ArrayList<>();
         try {
             stm = conn.conectado().createStatement();
             rst = stm.executeQuery("SELECT * FROM empleado WHERE id in (SELECT empleado FROM empleado_proyecto WHERE proyecto like " + id + ")");
@@ -169,12 +169,12 @@ public class Modelo {
                 e.setNombre(rst.getString("Nombre"));
                 e.setApellido(rst.getString("Apellido"));
                 e.setFechaNacimiento(rst.getString("Fecha_Nacimiento"));
-                lEmple2.add(e);
+                listaEmpleProy.add(e);
             }
         } catch (SQLException ex) {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return lEmple2;
+        return listaEmpleProy;
     }
 
     public void agregarEmpleProy(int id_emple, int id_proy) {
