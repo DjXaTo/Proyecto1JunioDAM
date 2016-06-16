@@ -68,7 +68,7 @@ public class Modelo {
         try {
             stm = conn.conectado().createStatement();
             String sql;
-            sql = "SELECT count(empleado) AS total FROM empleado_proyecto where empleado=" + id;
+            sql = "SELECT count(empleado) AS total FROM empleado_proyecto where empleado=" + id; 
             ResultSet ex = stm.executeQuery(sql);
             ex.first();
             int total = ex.getInt("total");
