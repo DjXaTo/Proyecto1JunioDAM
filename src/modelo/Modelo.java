@@ -156,7 +156,7 @@ public class Modelo {
             Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-//MEZCLA
+//RELACIÓN
     public ArrayList<Empleado> leerEmpleProy(int id) {
         ArrayList<Empleado> listaEmpleProy = new ArrayList<>();
         try {

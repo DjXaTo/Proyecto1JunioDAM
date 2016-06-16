@@ -139,7 +139,7 @@ public class Controlador {
                             consultas.agregarEmpleProy(empleProy.getId(), proy.getId());
                             jdip.dispose();
                         } else {
-                            JOptionPane.showMessageDialog(p, "Ya esta el maximo de empleados por proyecto, seleccione otro o elimine un empleado del proyecto priemero");
+                            JOptionPane.showMessageDialog(p, "Ya esta el maximo de empleados por proyecto, seleccione otro o elimine un empleado del proyecto primero");
                             jdip.dispose();
                         }
                     } catch (SQLException ex) {
