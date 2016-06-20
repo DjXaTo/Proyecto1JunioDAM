@@ -3,6 +3,7 @@ package modelo;
 import clases.Empleado;
 import clases.Proyecto;
 
+import java.sql.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -88,6 +89,29 @@ public class Modelo {
         }
 
     }
+    
+    public void pruebaBorrarEmpleado (int codigo) {
+        try {
+            String q;
+            q = "{? = call comprobarEmpProy ( ? )}";
+            CallableStatement cstm = conn.conectado().prepareCall(q);
+            cstm.setInt(2, codigo);
+            cstm.registerOutParameter(1, java.sql.Types.BOOLEAN);
+            cstm.execute();
+            boolean confirmacion = cstm.getBoolean(1);
+            if (confirmacion == true) {
+                int i = JOptionPane.showConfirmDialog(null, "¿Seguro que desear despedir al empleado?");
+                if (i==0){
+                    q = "DELETE FROM empleado where id=" + codigo;
+                    stm.executeUpdate(q);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "No se puede borrar un empleado asignado a un proyecto");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     //PROYECTOS
     public ArrayList<Proyecto> leerProyectos() {
@@ -148,6 +172,29 @@ public class Modelo {
                     sql = "DELETE FROM proyecto where id=" + id;
                     stm.executeUpdate(sql);
                     // System.out.println("BORRADO EL PROYECTO");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "No se puede borrar un proyecto que tenga empleados asignados");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Modelo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void pruebaBorrarProyecto (int codigo) {
+        try {
+            String q;
+            q = "{? = call comprobarProyEmple ( ? )}";
+            CallableStatement cstm = conn.conectado().prepareCall(q);
+            cstm.setInt(2, codigo);
+            cstm.registerOutParameter(1, java.sql.Types.BOOLEAN);
+            cstm.execute();
+            boolean confirmacion = cstm.getBoolean(1);
+            if (confirmacion == true) {
+                int i = JOptionPane.showConfirmDialog(null, "¿Seguro que desear eliminar el proyecto?");
+                if (i==0){
+                    q = "DELETE FROM proyecto where id=" + codigo;
+                    stm.executeUpdate(q);
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "No se puede borrar un proyecto que tenga empleados asignados");

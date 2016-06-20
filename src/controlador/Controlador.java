@@ -19,6 +19,7 @@ import java.io.FileOutputStream;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.sql.*;
 
 public class Controlador {
 
@@ -103,7 +104,7 @@ public class Controlador {
                 JOptionPane.showMessageDialog(jdne, "Error, seleccione un empleado de la tabla primero");
             } else {
                 Empleado despedido = empleados.get(p.TablaEmpleados.getSelectedRow());
-                consultas.borrarEmpleado(despedido.getId());
+                consultas.pruebaBorrarEmpleado(despedido.getId());
                 p.TablaEmpleados.setModel(this.getTablaEmple());
             }
         });
@@ -228,7 +229,7 @@ public class Controlador {
         p.btnBorrarProy.addActionListener((ActionEvent e) -> {
             proyectos = consultas.leerProyectos();
             Proyecto borrado = proyectos.get(p.jComboBox1.getSelectedIndex());
-            consultas.borrarProyecto(borrado.getId());
+            consultas.pruebaBorrarProyecto(borrado.getId());
             p.jComboBox1.setModel(this.getComboBox());
             this.setTxtsProyecto(proyectos.get(p.jComboBox1.getSelectedIndex()));
         });
